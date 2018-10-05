@@ -6,5 +6,5 @@
 <li><a href="https://github.com/sofiazakharova">Личная страница</a><br>
 <li><a href="https://github.com/sofiazakharova/Zakharova2018-19github.io">Личный репозиторий</a><br>
 <li><a href="https://github.com/sofiazakharova/SofiaZakharova.github.io/wiki">WiKi</a><br>
-<li><a href="https://SofiaZakharova.github.io ">index</a></ol><br>
+<li><a href="https://SofiaZakharova.github.io/Zakharova2018-19github.io/index.html ">index</a></ol><br>
 
