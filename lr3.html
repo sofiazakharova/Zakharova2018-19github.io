@@ -1,0 +1,82 @@
+﻿
+<html lang="ru">
+    <head>
+        <title>Личная Страница Захаровой С.А. ИДМ-18-04</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Интернет - технологии" />
+        <meta name="keywords" content="css3, transitions, menu, blur, navigation, typography, font, letters, text-shadow" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style6.css" />
+		<!--[if IE]>
+			<link rel="stylesheet" type="text/css" href="css/styleIE.css" />
+		<![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css' />
+    </head>
+    <body style="background-image: url(images/pattern.png), url(images/6.jpg);">
+        <div class="container">
+            <div class="header">
+                <a href="https://github.com/sofiazakharova/inet-2018">
+                    <strong><i>Интернет - технологии 2018</i></strong>
+                </a>
+                <span class="right">
+          
+                </span>
+                <div class="clr"></div>
+            </div>
+            <h1><strong>Захарова Софья <span> </strong></h1>
+            <h1>ИДМ-18-04 </span> </h1>
+<div class="inner">
+	<h1>Лабораторная работа #3</h1>
+	<h2>Настройка локальной сети передачи данных</h2>
+	     <ul class="actions">
+								
+				Настройка коммутаторов и маршрутизаторов.<br>
+				Расчет диапазонов подсетей.
+				<table> 
+				<tr><th> - </th><th>Lan A</th><th>Lan B</th><th>Lan C</th></tr>
+				<tr><th>Кол-во узлов&nbsp;&nbsp;&nbsp;&nbsp;</th><th>35</th><th>120</th><th>512</th></tr>
+				<tr><th>Subnet</th><th>192.168.5.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>172.16.5.0</th><th>10.10.5.0</th></tr>
+				<tr><th>Mask</th><th>255.255.255.192&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>255.255.255.128&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>255.255.252.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th></tr>
+				<tr><th>Broadcast</th><th>192.168.5.63&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><th>172.16.5.127</th><th>10.10.8.255</th></tr>
+						</table>
+						ШАГ 1: Разместить на рабочем поле коммутатор и два компьютера и соединить их<br>
+						<img class="center-img" src ="scr1.jpg"><br>
+						ШАГ 2: Добавить на рабочее поле еще один коммутатор с двумя компьютерами и настроить адресацию из другой подсети<br>
+						<img class="center-img" src ="scr2.jpg"><br>
+						ШАГ 3: Соединить коммутаторы между собой и проверить работоспособность сети (Не работает, так как коммутаторы подсоединяются только к маршрутизаторам)<br>
+						<img class="center-img" src ="scr0.jpg"><br>
+						ШАГ 4: Добавить маршрутизатор на рабочее поле<br>
+						<img class="center-img" src ="scr3.jpg"><br> 
+								ШАГ 5: Добавить на рабочее поле еще один маршрутизатор. Подключить к нему коммутатор и компьютер<br>
+								<img class="center-img" src ="scr4.jpg"><br>
+								<table>
+								<tr><th>Устройство&nbsp;&nbsp;&nbsp;&nbsp;</th><th>IP - адрес</th><th>Маска</th><th>Шлюз</th></tr>
+								<tr><th>PC0</th><th>192.168.5.62&nbsp;&nbsp;&nbsp;&nbsp;</th><th>255.255.255.192&nbsp;&nbsp;&nbsp;&nbsp;</th><th>192.168.5.1</th></tr>
+								<tr><th>PC1</th><th>192.168.5.61</th><th>255.255.255.192</th><th>192.168.5.1</th></tr>
+								<tr><th>PC2</th><th>172.16.5.126</th><th>255.255.255.128</th><th>172.16.5.1</th></tr>
+								<tr><th>PC3</th><th>172.16.5.125</th><th>255.255.255.128</th><th>172.16.5.1</th></tr>
+								<tr><th>PC4</th><th>10.10.8.254</th><th>255.255.252.0</th><th>10.10.5.1</th></tr>
+								<tr><th>R0 0/0</th><th>192.168.5.1</th><th>255.255.255.192</th><th> - </th></tr>
+								<tr><th>R0 0/1</th><th>172.16.5.1</th><th>255.255.255.128</th><th> - </th></tr>
+								<tr><th>R0 0/2</th><th>15.15.5.2</th><th>255.255.255.252</th><th> - </th></tr>
+								<tr><th>R1 0/1</th><th>10.10.5.1</th><th>255.255.252.0</th><th> - </th></tr>
+								<tr><th>R1 0/2</th><th>15.15.5.1</th><th>255.255.255.252</th><th> - </th></tr>
+								</table>
+								Настройка статической маршрутизации производится при помощи команды: ip route [сеть назначения] [маска] [маршрут]<br>
+								Установить банер на сетевое оборудование: banner motd [баннер]<br>
+								<h3>Проверка работоспособности сети:</h3><br>
+								<img class="center-img" src ="successful.jpg"><br>
+								<center>Пакеты успешно отправляются!</center>
+							</ul>
+						</div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    </body>
+</html>
+
